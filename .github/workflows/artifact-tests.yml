@@ -82,11 +82,7 @@ jobs:
     
     - name: 'Verify First Artifact'
       run: |
-        pwd
-        cd single-artifact-directory/artifact-path
-        ls
-        cat world.txt
-        $file = "single-artifact-directory/artifact-path/world.txt"  
+        $file = "single-artifact-directory/artifact-path/world.txt"
         if(!(Test-Path -path $file))
         {
             Write-Error "Expected file does not exist"
